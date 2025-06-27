@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to bottom right, #e0eafc, #cfdef3);
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 50%;
+            max-width: 600px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2em; 
+            margin-bottom: 20px;
+        }
+        .spam {
+            background-color: #fdd;
+            color: #a00;
+            border: 1px solid #a00;
+        }
+        .ham {
+            background-color: #dfd;
+            color: #0a0;
+            border: 1px solid #0a0;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff; 
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="result {{ prediction }}">The SMS is classified as: {{ prediction }}</div>
+        <a href="/">Check another message</a>
+    </div>
+</body>
+</html>
